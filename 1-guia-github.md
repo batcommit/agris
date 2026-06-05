@@ -11,7 +11,7 @@ cd caminho-da-pasta-do-projeto
 
 Agora você irá clonar todo o conteúdo do repositório. Execute:
 
-git clone <url-do-repositorio>
+git clone https://github.com/batcommit/agris.git
 
 
 # Passo 2: Criar uma Branch de Trabalho:
