@@ -2,11 +2,11 @@
 # Estrutura Padrão
 Toda mensagem de commit deve seguir a estrutura rigorosa abaixo:
 
-<tipo>[escopo opcional]: <descrição curta>
+"tipo": "escopo (opcional)": "descrição curta"
 
 
 # Tipos de Commit
-O <tipo> define a natureza da mudança realizada. Para o nosso repositório, utilize os seguintes prefixos:
+O tipo define a natureza da mudança realizada. Para o nosso repositório, utilize os seguintes prefixos:
 
 feat: Adição de uma nova funcionalidade ao projeto.
     Exemplo: feat: adiciona formulario de cadastro para doadores de alimentos
@@ -30,12 +30,12 @@ chore: Atualizações de tarefas de execução, configurações de sistema, depe
     Exemplo: chore: atualiza dependencias do projeto no .NET
 
 # Escopo (Opcional)
-O [escopo] serve para indicar a qual parte estrutural do projeto o commit pertence, devendo ser escrito sempre entre parênteses.
+O escopo serve para indicar a qual parte estrutural do projeto o commit pertence, devendo ser escrito sempre entre parênteses.
     Exemplos: feat(frontend): ..., fix(api): ..., feat(banco-de-dados): ...
 
 
 # Regras para a Descrição
-A <descrição> deve ser um resumo conciso da alteração, seguindo estas regras de escrita:
+A descrição deve ser um resumo conciso da alteração, seguindo estas regras de escrita:
     Use o verbo no imperativo: Escreva como se estivesse dando uma ordem direta ao sistema sobre o que aquele commit faz. Use "adiciona", "corrige", "remove", "atualiza".
         Incorreto: feat: adicionando botao de envio ou feat: adicionei botao de envio
         Correto: feat: adiciona botao de envio
