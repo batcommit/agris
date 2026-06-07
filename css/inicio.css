@@ -19,6 +19,12 @@ body{
     background:#00032e;
 }
 
+:root{
+   --btn-color: #045e17;
+   --principal-color:#00032e;
+   --card-radius: 28px;
+}
+
 
 /* =========================================================
 NAVBAR
@@ -26,7 +32,7 @@ NAVBAR
 
 /* logo */
 .logo {
-    width: 100px;
+    width: 350px;
 }
 
 /* NAV CONTAINER */
@@ -61,6 +67,22 @@ nav{
     transition:0.3s ease;
 }
 
+footer{
+    background-color: #00032e;
+    color: #F8FAFC;
+    text-align: center;
+    padding: 15px 7%;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
 
 /* NAV LINKS */
 
@@ -68,7 +90,7 @@ nav ul{
 
     display:flex;
 
-    gap:35px;
+    gap:10px;
 
     list-style:none;
 }
@@ -85,7 +107,7 @@ nav ul li a{
 
     transition:0.3s ease;
 
-    padding:10px 18px;
+    padding:7px 16px;
 
     border-radius:999px;
 
@@ -310,7 +332,7 @@ HOME
 
     padding:18px 38px;
 
-    border-radius:14px;
+    border-radius:var(--card-radius);
 
     text-decoration:none;
 
@@ -377,7 +399,7 @@ HOME
 
     padding: 40px;
 
-    border-radius: 28px;
+    border-radius: var(--card-radius);
 
     background: #F8FAFC;
 
@@ -445,7 +467,7 @@ PITCH VIDEO
 
     padding:16px 22px;
 
-    border-radius:18px;
+    border-radius: var(--card-radius);
 
     text-decoration:none;
 

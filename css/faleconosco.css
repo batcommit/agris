@@ -1,3 +1,11 @@
+:root{
+    --btn-color: #045e17;
+    --principal-color:#00032e;
+    --card-color:#fcfdf5;
+    --fundo-color:#ecedf0;
+    --card-radius: 28px;
+}
+
 /* =========================================================
 RESET + FONTES
 ========================================================= */
@@ -16,13 +24,7 @@ body{
     font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
     overflow-x:hidden;
     color:#222;
-}
-
-h1,
-h2,
-h3,
-button{
-    font-family:'Poppins', sans-serif;
+    padding: 0;
 }
 
 /* =========================================================
@@ -70,10 +72,25 @@ nav{
     transition:0.3s ease;
 }
 
+footer{
+    background-color: #00032e;
+    color: #F8FAFC;
+    text-align: center;
+    padding: 15px 7%;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
 
 /* logo */
 .logo {
-    width: 100px;
+    width: 350px;
 }
 
 
@@ -83,7 +100,7 @@ nav ul{
 
     display:flex;
 
-    gap:35px;
+    gap:10px;
 
     list-style:none;
 }
@@ -100,7 +117,7 @@ nav ul li a{
 
     transition:0.3s ease;
 
-    padding:10px 18px;
+    padding:7px 16px;
 
     border-radius:999px;
 
@@ -136,7 +153,7 @@ CONTATO
 
 #Contato{
 
-    position:relative;
+    /* position:relative; */
 
     overflow:hidden;
 
@@ -165,8 +182,6 @@ SECTION TOP
 .section-top{
 
     text-align:center;
-
-    margin-bottom:80px;
 }
 
 /* BADGE PILULA */
@@ -227,7 +242,7 @@ SECTION TOP
 
     height:4px;
 
-    margin:18px auto 0;
+    margin:10px auto 0;
 
     border-radius:999px;
 
@@ -249,9 +264,9 @@ SECTION TOP
 
     margin:0 auto;
 
-    line-height:1.8;
-
     color:#F8FAFC;
+
+    margin-bottom:35px;
 }
 
 /* =========================================================
@@ -277,7 +292,7 @@ INFORMACOES
 
     flex-direction:column;
 
-    gap:25px;
+    gap:20px;
 }
 
 /* =========================================================
@@ -288,9 +303,9 @@ CARDS
 
     background:#F8FAFC;
 
-    padding:35px;
+    padding:30px;
 
-    border-radius:24px;
+    border-radius:var(--card-radius);
 
     border:1px solid #D6E1EE;
 
@@ -334,7 +349,7 @@ FORMULARIO
 
     padding:40px;
 
-    border-radius:28px;
+    border-radius:var(--card-radius);
 
     display:flex;
 
