@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento | Agris</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento | Agris</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="./css/monitoramento.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" ></script>
 </head>
 <body>
-    
+
+  <header>
+    <a href="#"><img src="" alt="Agris"></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Monitoramento</a></li>
+        <li><a href="#">Recomendações</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      
+
+    <section class="secao-mapa">
+      <div id="mapa"></div>
+      <button id="btn-desmarcar" onclick="desmarcar()">Desmarcar</button>
+   </section>
+     <article>
+      <h1 id="titulo-terreno">Terrenos Brasil(-)</h1>
+      <p id="desc-terreno">O plantio adequado para cada estado do Brasil</p>
+     </article>
+    <section class="secao-compatibilidade">
+      <div id="compatibilidade" class="seq-card">
+      </div>
+    </section>
+    <section class="cart-card">
+      <div class="dois">
+
+        <div class="cards">
+          <h2>Dados Agrícolas</h2>
+          <table>
+            <tr><td>Fertilidade</td>    <td id="fertilidade"><strong>—</strong></td></tr>
+            <tr><td>pH do solo</td>     <td id="ph"><strong>—</strong></td></tr>
+            <tr><td>Nitrogênio</td>     <td id="nitrogenio"><strong>—</strong></td></tr>
+            <tr><td>Água disponível</td><td id="agua"><strong>—</strong></td></tr>
+          </table>
+        </div>
+        <div class="tempo">
+          <h2>Previsão do Tempo (7 dias)</h2>
+          <div class="semana">
+            <div class="dia">
+              <span>Segunda</span>
+              <i class="fa-solid fa-sun" aria-label="Ensolarado"></i>
+              <p class="max">28°</p>
+              <p class="min">18°</p>
+            </div>
+            <div class="dia">
+              <span>Terça</span>
+              <i class="fa-solid fa-cloud-bolt" aria-label="Tempestade"></i>
+              <p class="max">28°</p>
+              <p class="min">18°</p>
+            </div>
+            <div class="dia">
+              <span>Quarta</span>
+              <i class="fa-solid fa-cloud" aria-label="Nublado"></i>
+              <p class="max">28°</p>
+              <p class="min">18°</p>
+            </div>
+            <div class="dia">
+              <span>Quinta</span>
+              <i class="fa-solid fa-cloud-sun" aria-label="Parcialmente nublado"></i>
+              <p class="max">28°</p>
+              <p class="min">18°</p>
+            </div>
+            <div class="dia">
+              <span>Sexta</span>
+              <i class="fa-solid fa-cloud-rain" aria-label="Chuva"></i>
+              <p class="max">28°</p>
+              <p class="min">18°</p>
+            </div>
+            <div class="dia">
+              <span>Sábado</span>
+              <i class="fa-solid fa-cloud-bolt" aria-label="Tempestade"></i>
+              <p class="max">28°</p>
+              <p class="min">18°</p>
+            </div>
+            <div class="dia">
+              <span>Domingo</span>
+              <i class="fa-solid fa-sun" aria-label="Ensolarado"></i>
+              <p class="max">30°</p>
+              <p class="min">27°</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="historico">
+        <div class="historico-header">
+          <h2>Histórico de precipitação</h2>
+          <div class="filtro">
+            <label for="periodo">Período</label>
+            <select name="periodo" id="periodo">
+              <option value="ultimo-2ano">Últimos 2 anos</option>
+              <option value="ultimo-ano">Último ano</option>
+              <option value="6-meses">Últimos 6 meses</option>
+              <option value="30-dias">Últimos 30 dias</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/monitoramento.js"></script>
 </body>
 </html>

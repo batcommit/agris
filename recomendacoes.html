@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recomendações | Agris</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"> 
+    <link rel="stylesheet" href="./css/recomendacoes.css">
 </head>
 <body>
-    
+    <header>
+        <a href="#"><img src="" alt="">
+        </a>
+        <nav> <ul>
+           <li><a href="#">Início</a></li>
+           <li><a href="#">Monitoramento</a></li>
+           <li><a href="#">Recomendações</a></li>
+           <li><a href="#">Fale Conosco</a></li>
+           
+        </ul>
+     </nav>
+    </header>
+    <main>
+        <article>
+            <h1> O que fazer hoje na sua lavoura.</h1>
+            <p>Baseadas em histórico e dados em tempo real dos terrenos desejados</p>
+        </article>
+         <div class="simulacao">
+            <div class="simu-header"><h3>Simulações Climáticas</h3>
+            <section class="botoes">
+            <button onclick="mostrar('seca')"> <i class="fa-solid fa-sun"></i>
+                Seca prolongada</button>
+            <button onclick="mostrar('chuva')"><i class="fa-solid fa-cloud-showers-heavy"></i>Chuva Intensa</button>
+                <button onclick="mostrar('geada')"><i class="fa-regular fa-snowflake"></i> Geada</button></div></section>
+                <div class="options">
+                <p id="seca" class="frase">
+                 Em cenário de seca prolongada (>30 dias), a disponibilidade hídrica cairia em ~45%. Recomenda-se irrigação suplementar e cultivares tolerantes.
+                </p>
+                   <p id="chuva" class="frase">
+                     Chuvas intensas podem causar lixiviação de nutrientes (perda estimada 20% de N). Avalie drenagem e adiar adubação de cobertura.
+                </p>
+                   <p id="geada" class="frase">
+                  Risco de geada compromete culturas sensíveis. Antecipar colheita ou usar proteção térmica em áreas baixas.
+                </p>
+                 
+        </div>
+        </div>
+        <section class="seq-card">
+        <div class="card">
+            <h3>Janela favorável para pulverização</h3>
+            <p>Baixa precipitação(8.4mm) e umidade adequada -  condições ótimas para aplicação</p>
+            <span>Manejo - Hoje</span>
+        </div>
+        <div class="card">
+            <h3>Janela favorável para pulverização</h3>
+            <p>Baixa precipitação(8.4mm) e umidade adequada -  condições ótimas para aplicação</p>
+            <span>Manejo - Hoje</span>
+        </div>
+        <div class="card">
+            <h3>Aptidão do terreno para Soja</h3>
+            <p>Com base em fertilidade (Baixa), pH (5.6) e umidade (34.3%), o terreno apresenta aptidão média para Soja.</p>
+            <span>Cultivo</span>
+        </div>
+        <div class="card">
+            <h3>Considerar irrigação</h3>
+            <p>Água disponível no solo: 44.3%. Abaixo do ideal — programar irrigação nos próximos 3 dias.</p>
+            <span>Hídrico</span>
+        </div>
+        <div class="card">
+            <h3>Adubação para Soja</h3>
+            <p>Fertilidade baixa detectada. Recomenda-se correção com NPK 10-20-20 antes do plantio.</p>
+            <span>Solo · Próximos 7 dias</span>
+        </div>
+        <div class="card">
+            <h3>Janela favorável para pulverização</h3>
+            <p>Baixa precipitação(8.4mm) e umidade adequada -  condições ótimas para aplicação</p>
+            
+            <span>Manejo - Hoje</span>
+        </div>
+       
+        </section>
+    </main>
+
+<footer>
+      <p>Onde a inteligência territorial encontra o potencial do campo.</p>
+</footer>
+     <script src="./js/recomendacoes.js"></script>
 </body>
 </html>
