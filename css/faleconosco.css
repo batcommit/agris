@@ -71,15 +71,9 @@ nav{
 }
 
 
-/* LOGO */
-
-.logo{
-
-    color:#F8FAFC;
-
-    font-size:28px;
-
-    font-weight:700;
+/* logo */
+.logo {
+    width: 100px;
 }
 
 
@@ -451,25 +445,25 @@ BOTAO
 ANIMAÇÕES
 ========================================================= */
 
-.fade-in,
+/* .fade-in,
 .slide-left,
 .slide-right,
 .zoom-in{
     opacity:0;
     transition:opacity 1s ease, transform 1s ease;
-}
+} */
 
 /* FADE */
-.fade-in{ transform:translateY(40px); }
+/* .fade-in{ transform:translateY(40px); } */
 
 /* SLIDE LEFT */
-.slide-left{ transform:translateX(-80px); }
+/* .slide-left{ transform:translateX(-80px); } */
 
 /* SLIDE RIGHT */
-.slide-right{ transform:translateX(80px); }
+/* .slide-right{ transform:translateX(80px); } */
 
 /* ZOOM */
-.zoom-in{ transform:scale(0.85); }
+/* .zoom-in{ transform:scale(0.85); } */
 
 /* ACTIVE STATE */
 .visible{
