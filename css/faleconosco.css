@@ -457,6 +457,24 @@ BOTAO
 }
 
 /* =========================================================
+VALIDAÇÃO DOS VALORES DOS CAMPOS - FORMULÁRIO
+========================================================= */
+
+#erroNome,
+#erroEmail,
+#erroTelefone,
+#erroMensagem{
+
+    color:red;
+
+    font-size:14px;
+
+    margin-top:-10px;
+
+    margin-bottom:5px;
+}
+
+/* =========================================================
 ANIMAÇÕES
 ========================================================= */
 
