@@ -1,0 +1,303 @@
+:root{
+--btn-color: #045e17;
+--principal-color:#00032e;
+--card-color:#fcfdf5;
+--fundo-color:#ecedf0;
+--card-radius: 28px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
+    padding: 120px 7% 0;
+    margin: 0 auto;
+    background-color:var(--principal-color);
+    box-sizing: border-box;
+}
+
+/* logo */
+    .logo {
+        width: 350px;
+    }
+
+/* NAV */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:85px;
+
+    padding:0 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
+    background: #00032e;
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(56,189,248,0.12);
+
+    transition:0.3s ease;
+}
+
+footer{
+    background-color: #00032e;
+    color: #F8FAFC;
+    text-align: center;
+    padding: 15px 7%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* NAV LINKS */
+
+nav ul{
+
+    display:flex;
+
+    gap:10px;
+
+    list-style:none;
+}
+
+nav ul li a{
+
+    color:#F8FAFC;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:0.3s ease;
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #045E17,
+        #0B7A24
+    );
+
+    border:1px solid rgba(56,189,248,0.08);
+}
+
+
+nav ul li a:hover{
+
+     background:linear-gradient(
+        135deg,
+        #045E17,
+        #1FAF43
+    );
+
+    transform:translateY(-2px);
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+}
+
+article{
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    
+}
+
+h1{
+    color: var(--card-color);
+    font-size: 35px;
+}
+
+article p{
+    padding-top: 4px;
+    font-size: 17px;
+    color: var(--card-color);
+    margin-bottom: 15px;
+}
+
+.simulacao{
+    width: 97%;
+    max-width: 97%;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--card-color);
+    border-radius: var(--card-radius);
+    padding: 20px;
+    margin: auto;
+    overflow: hidden;
+
+    
+}
+
+.simu-header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    justify-content: space-between;      
+    margin-left: auto;
+    align-items: center;
+}
+
+.simu-header h3{
+    font-size: 20px;
+}
+
+.simulacao button{
+
+    background:#002E3A
+        ;
+    color: var(--fundo-color);
+    border-radius: 13px;
+    border: none;
+    padding: 12px;
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+}
+
+.botoes{
+    display: flex;
+    gap: 8px;
+    margin-left: auto; 
+    width: fit-content;
+
+
+}
+
+.botoes i{
+    color: var(--card-color);
+    display: flex;
+    align-items: center;
+}
+
+.botoes button:hover{
+    transform: scale(1.08);
+    background:linear-gradient(
+        135deg,
+        #045E17,
+        #1FAF43
+    );
+}
+
+.options{
+    
+    background-color: var(--btn-color);
+    border-radius: 18px;
+    width: 100%;
+    margin-top: 9px;
+}
+
+.frase{
+    display: none;
+    font-size: 17px;
+    padding: 20px;
+    color: var(--fundo-color);
+    animation: fadeIn 0.3s ease;
+}
+
+
+.seq-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 16px;
+    margin: 20px;
+    align-items: start;
+    flex-wrap: wrap;
+
+}
+
+
+.card{
+    box-sizing: border-box;
+    height: 280px;
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: var(--card-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.card:hover{
+    opacity: 0.96;
+}
+
+.card h3{
+    font-size: 30px; 
+    padding-bottom: 5px;
+}
+
+.card p{
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.card span{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(184, 5, 5);
+    color: var(--card-color);
+    margin-top: auto;
+    border-radius: 14px;
+    padding: 6px;
+    font-size: 17px;
+    
+}
+        
+footer{
+    background-color: var(--principal-color);
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+footer p{
+    color: var(--card-color);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+}
