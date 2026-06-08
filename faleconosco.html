@@ -1,11 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Fale Conosco | Agris</title>
+
+    <!-- Chamada da CSS -->
+    <link rel="stylesheet" href="./css/faleconosco.css">
+
+    <!-- Chamada do JS -->
+    <script defer src="./js/faleconosco.js"></script>
+
+    <!-- Chamada do Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
 <body>
-    
+
+    <!-- =========================================================
+    HEADER
+    ========================================================= -->
+
+    <header>
+
+        <nav>
+
+            <img
+                src="./img/agris-logo-nasa.png"
+                alt="Agris Logo"
+                class="logo"
+            >
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+
+                <li>
+                    <a href="monitoramento.html">Monitoramento</a>
+                </li>
+
+                <li>
+                    <a href="recomendacoes.html">Recomendações</a>
+                </li>
+
+                <li>
+                    <a href="faleconosco.html">Fale Conosco</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- =========================================================
+    FALE CONOSCO
+    ========================================================= -->
+
+    <section id="Contato">
+
+        <div class="section-top fade-in">
+
+            <h2 class="fade-in">
+                Fale Conosco
+            </h2>
+
+            <p class="slide-right">
+                Dê o próximo passo no mercado rural com a Agris.
+            </p>
+
+        </div>
+
+        <div class="contato-grid">
+
+            <div class="contato-info slide-left">
+
+                <div class="info-card fade-in">
+
+                    <h3>Email</h3>
+
+                    <p>agris.comercial@gmail.com</p>
+
+                </div>
+
+                <div class="info-card fade-in">
+
+                    <h3>Telefone</h3>
+
+                    <p>(11) 97211-8003</p>
+
+                </div>
+
+                <div class="info-card fade-in">
+
+                    <h3>Localização</h3>
+
+                    <p>São Paulo — Brasil</p>
+
+                </div>
+
+            </div>
+
+            <form class="contato-form slide-right">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Seu nome"
+                    maxlength="50"
+                    class="fade-in"
+                >
+
+                <p id="erroNome"></p>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Seu email"
+                    maxlength="50"
+                    class="fade-in"
+                >
+
+                <p id="erroEmail"></p>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="11999999999"
+                    maxlength="11"
+                    class="fade-in"
+                >
+
+                <p id="erroTelefone"></p>
+
+                <textarea
+                    id="mensagem"
+                    placeholder="Digite sua mensagem"
+                    maxlength="500"
+                    class="fade-in"
+                ></textarea>
+
+                <p id="erroMensagem"></p>
+
+                <button
+                    type="button"
+                    class="zoom-in"
+                    id="btnEnviar"
+                >
+                    Enviar Mensagem
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 - Agris - Inteligência territorial para o agronegócio.
+        </p>
+
+    </footer>
+
 </body>
+
 </html>

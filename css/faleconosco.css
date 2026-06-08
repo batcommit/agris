@@ -1,0 +1,566 @@
+:root{
+    --btn-color: #045e17;
+    --principal-color:#00032e;
+    --card-color:#fcfdf5;
+    --fundo-color:#ecedf0;
+    --card-radius: 28px;
+}
+
+/* =========================================================
+RESET + FONTES
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
+    overflow-x:hidden;
+    color:#222;
+    padding: 0;
+}
+
+/* =========================================================
+SECTIONS GLOBAIS
+========================================================= */
+
+section{
+    padding:120px 7%;
+}
+
+/* =========================================================
+NAVBAR
+========================================================= */
+
+
+/* NAV CONTAINER */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:85px;
+
+    padding:0 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:1000;
+
+    background: #00032e;
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(56,189,248,0.12);
+
+    transition:0.3s ease;
+}
+
+footer{
+    background-color: #00032e;
+    color: #F8FAFC;
+    text-align: center;
+    padding: 15px 7%;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* logo */
+.logo {
+    width: 350px;
+}
+
+
+/* NAV LINKS */
+
+nav ul{
+
+    display:flex;
+
+    gap:10px;
+
+    list-style:none;
+}
+
+nav ul li a{
+
+    color:#F8FAFC;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:0.3s ease;
+
+    padding:7px 16px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #045E17,
+        #0B7A24
+    );
+
+    border:1px solid rgba(56,189,248,0.08);
+}
+
+
+nav ul li a:hover{
+
+     background:linear-gradient(
+        135deg,
+        #045E17,
+        #1FAF43
+    );
+
+    transform:translateY(-2px);
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+}
+
+/* =========================================================
+CONTATO
+========================================================= */
+
+#Contato{
+
+    /* position:relative; */
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(59,74,107,0.18),
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at bottom left,
+        rgba(31,175,67,0.08),
+        transparent 40%
+    ),
+    linear-gradient(
+        135deg,
+        #00032E 0%,
+        #F8FAFC 100%
+    );
+}
+
+/* =========================================================
+SECTION TOP
+========================================================= */
+
+.section-top{
+
+    text-align:center;
+}
+
+/* BADGE PILULA */
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 26px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    background: rgba(255,255,255,0.85);
+
+    border: 1px solid rgba(0,3,46,0.15);
+
+    color: #0F172A;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1.2px;
+
+    text-transform:uppercase;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* TITULO */
+
+.section-top h2{
+
+    font-size:58px;
+
+    color:#F8FAFC;
+
+    margin-bottom:20px;
+}
+
+/* LINHA DECORATIVA */
+
+.section-top h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin:10px auto 0;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00032E,
+        #1FAF43
+    );
+}
+
+/* DESCRICAO */
+
+.section-top p{
+
+    font-size:20px;
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    color:#F8FAFC;
+
+    margin-bottom:35px;
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.contato-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:50px;
+}
+
+/* =========================================================
+INFORMACOES
+========================================================= */
+
+.contato-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* =========================================================
+CARDS
+========================================================= */
+
+.info-card{
+
+    background:#F8FAFC;
+
+    padding:30px;
+
+    border-radius:var(--card-radius);
+
+    border:1px solid #D6E1EE;
+
+    box-shadow:
+    0 12px 32px rgba(15,23,42,0.08);
+
+    transition:0.35s ease;
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 20px 45px rgba(15,23,42,0.12);
+}
+
+.info-card h3{
+
+    color:#0F172A;
+
+    margin-bottom:10px;
+
+    font-size:22px;
+}
+
+.info-card p{
+
+    color:#475569;
+
+    line-height:1.8;
+}
+
+/* =========================================================
+FORMULARIO
+========================================================= */
+
+.contato-form{
+
+    background:#F1F6FC;
+
+    padding:40px;
+
+    border-radius:var(--card-radius);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    border:1px solid #D6E1EE;
+
+    box-shadow:
+    0 12px 32px rgba(15,23,42,0.08);
+}
+
+/* =========================================================
+INPUTS
+========================================================= */
+
+.contato-form input,
+.contato-form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    border:1px solid #C7D5E5;
+
+    background:#FFFFFF;
+
+    color:#0F172A;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:0.3s ease;
+}
+
+.contato-form textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder{
+
+    color:#94A3B8;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus{
+
+    border-color:#1FAF43;
+
+    box-shadow:
+    0 0 0 4px rgba(31,175,67,0.12);
+}
+
+/* =========================================================
+BOTAO
+========================================================= */
+
+.contato-form button{
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#F8FAFC;
+
+    background:
+    linear-gradient(
+        135deg,
+        #045E17,
+        #1FAF43
+    );
+
+    transition:0.3s ease;
+
+    box-shadow:
+    0 12px 28px rgba(4,94,23,0.35);
+}
+
+.contato-form button:hover{
+
+    transform:translateY(-3px);
+
+    background:
+    linear-gradient(
+        135deg,
+        #034611,
+        #138B31
+    );
+}
+
+/* =========================================================
+VALIDAÇÃO DOS VALORES DOS CAMPOS - FORMULÁRIO
+========================================================= */
+
+#erroNome,
+#erroEmail,
+#erroTelefone,
+#erroMensagem{
+
+    color:red;
+
+    font-size:14px;
+
+    margin-top:-10px;
+
+    margin-bottom:5px;
+}
+
+/* =========================================================
+ANIMAÇÕES
+========================================================= */
+
+/* .fade-in,
+.slide-left,
+.slide-right,
+.zoom-in{
+    opacity:0;
+    transition:opacity 1s ease, transform 1s ease;
+} */
+
+/* FADE */
+/* .fade-in{ transform:translateY(40px); } */
+
+/* SLIDE LEFT */
+/* .slide-left{ transform:translateX(-80px); } */
+
+/* SLIDE RIGHT */
+/* .slide-right{ transform:translateX(80px); } */
+
+/* ZOOM */
+/* .zoom-in{ transform:scale(0.85); } */
+
+/* ACTIVE STATE */
+.visible{
+    opacity:1;
+    transform:translate(0,0) scale(1);
+}
+
+
+/* =========================================================
+RESPONSIVIDADE
+========================================================= */
+
+@media (max-width:992px){
+
+    .contato-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-top h2{
+
+        font-size:48px;
+    }
+}
+
+@media (max-width:768px){
+
+    section{
+
+        padding:90px 6%;
+    }
+
+    .section-top h2{
+
+        font-size:40px;
+    }
+
+    .section-top p{
+
+        font-size:18px;
+    }
+
+    .contato-form{
+
+        padding:30px;
+    }
+}
+
+@media (max-width:480px){
+
+    .section-top h2{
+
+        font-size:34px;
+    }
+
+    .section-top p{
+
+        font-size:16px;
+    }
+
+    .section-tag{
+
+        font-size:12px;
+
+        padding:10px 20px;
+    }
+}
