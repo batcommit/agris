@@ -70,3 +70,58 @@ Nas próximas vezes que precisar enviar atualizações na mesma branch, basta di
 
 # Passo 8: Abrir o Pull Request (PR):
 Após o push, o trabalho no terminal termina. Você deve acessar a página do repositório no navegador (GitHub, GitLab, etc.) e abrir um "Pull Request" ou "Merge Request".
+
+
+
+### Complemento: Rotina e Comandos do Dia a Dia
+Para garantir que o desenvolvimento flua sem problemas e para evitar os temidos conflitos de código
+complexos, sigam este roteiro prático no dia a dia do projeto:
+
+1. Começando o Dia de Trabalho (Atualizar a Main local)
+Antes de começar a programar uma nova tarefa ou funcionalidade, você precisa garantir que sua base local
+está atualizada com o trabalho mais recente de toda a equipe. Sempre faça isso a partir da branch main:
+
+2. Iniciando uma Nova Tarefa (Criar Branch a partir da Main atualizada)
+Imediatamente após atualizar a sua main local (no passo anterior), crie a sua nova ramificação de trabalho:
+
+3. Mantendo sua Branch Atualizada durante o Desenvolvimento
+Se você está trabalhando em uma tarefa que leva mais de um dia ou se sabe que algum colega de equipe
+acabou de finalizar e enviar um PR importante para a main, não espere o fim da sua tarefa para atualizar
+seu código. Traga as novidades da main para dentro da sua branch atual:
+git push -u origin nome-da-sua-tarefa
+
+
+# 1. Mude para a branch principal
+git checkout main
+# 2. Baixe e mescle as alterações mais recentes do GitHub
+git pull origin main
+# 3. Crie e mude para a nova branch específica da sua atividade
+git checkout -b nome-da-nova-funcionalidade
+
+
+# Certifique-se de que está na sua branch de trabalho
+git checkout nome-da-sua-tarefa
+# Puxe as atualizações da main diretamente para a sua branch ativa
+git pull origin main
+
+
+# Guia de Git - Equipe de Desenvolvimento 3
+Vantagem desta prática: Se houver algum conflito de código com a alteração do seu colega, você
+resolve um conflito pequeno imediatamente, em vez de acumular dezenas de conflitos complexos no
+momento de entregar o Pull Request final.
+
+# 4. Ciclo Contínuo de Trabalho (O Loop de Codificação)
+Enquanto estiver desenvolvendo a sua tarefa, repita esse ciclo de comandos de forma incremental (evite
+fazer um commit gigante apenas no final do dia):
+
+# Resumo das Boas Práticas para o Time
+Commits Pequenos e Frequentes: É muito melhor fazer 5 commits explicando passos isolados (ex:
+"Criado layout do card", "Implementada função de clique") do que um único commit escrito "Tudo
+pronto" com 30 arquivos modificados.
+
+Nunca use git add . sem checar antes: Rode um git status antes de adicionar tudo para
+garantir que você não está enviando arquivos temporários ou de configuração pessoal para o
+repositório.
+
+Comunicação: Se o comando git pull origin main gerar um conflito em uma linha que você
+não mexeu, chame a pessoa que escreveu aquele código para resolverem o conflito juntos.

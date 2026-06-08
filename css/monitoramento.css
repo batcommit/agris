@@ -68,7 +68,6 @@ footer p {
 
 
 
-
 nav ul{
 
     display:flex;
@@ -192,9 +191,9 @@ table td{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px;}
     
-}
+
 
 .historico-header{
     display: flex;
