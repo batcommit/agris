@@ -13,7 +13,7 @@
 body{
     background:var(--principal);
     font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
-    padding: 120px 7% 0;
+    padding: 120px 7% 40px;
     margin: 0 auto;
     box-sizing: border-box; 
 }
@@ -53,15 +53,14 @@ nav{
     transition:0.3s ease;
 }
 
-footer{
-    background-color: #00032e;
+footer {
+    background-color: var(--principal);
     color: #F8FAFC;
     text-align: center;
     padding: 15px 7%;
     width: 100%;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
+    margin-top: 30px;
 }
 
 footer p {
@@ -241,24 +240,5 @@ table td{
    }
 }
 
-footer{
-    background-color: var(--principal-color);
-    margin-top: 20px;
-    width: 100%;
-    height: auto;
-}
 
-footer p{
-    color: var(--card-color);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    body {
-    padding-left: 20px;
-    padding-right: 20px;
-    }
-}
 
