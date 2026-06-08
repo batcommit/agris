@@ -21,6 +21,8 @@ body{
     width: 350px;
 }
 
+/* NAV CONTAINER */
+
 nav{
 
     position:fixed;
@@ -55,10 +57,11 @@ footer{
     background-color: #00032e;
     color: #F8FAFC;
     text-align: center;
-    padding: 20px 7%;
-    margin-top: 40px;
+    padding: 15px 7%;
     width: 100%;
     box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
 }
 
 footer p {
@@ -67,6 +70,7 @@ footer p {
 }
 
 
+/* NAV LINKS */
 
 nav ul{
 
@@ -105,10 +109,10 @@ nav ul li a{
 
 nav ul li a:hover{
 
-    background:linear-gradient(
-    135deg,
-    #045E17,
-    #1FAF43
+     background:linear-gradient(
+        135deg,
+        #045E17,
+        #1FAF43
     );
 
     transform:translateY(-2px);
@@ -118,6 +122,8 @@ nav ul li a:hover::after{
 
     width:100%;
 }
+
+
 
 .titulo{
     color: var(--card);
@@ -134,7 +140,7 @@ nav ul li a:hover::after{
     
 }
 .wrapper {
-    max-width: 1100px;  /* ajuste conforme preferir */
+    max-width: 1100px;  
     margin: 0 auto;
 }
 
@@ -235,4 +241,24 @@ table td{
    }
 }
 
+footer{
+    background-color: var(--principal-color);
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+footer p{
+    color: var(--card-color);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+}
 
