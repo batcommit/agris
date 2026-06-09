@@ -1,86 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agris | Monitoramento</title>
-<link rel="stylesheet" href="css/monitoramento.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agris | Monitoramento</title>
+    <link rel="stylesheet" href="css/monitoramento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
 </head>
 <body>
-
-<header>
-
+    
+    <header>
         <nav>
-
             <img src="./img/agris-logo-nasa.png" alt="Agris Logo" class="logo">
-
             <ul>
-
                 <li><a href="index.html">Início</a></li>
                 <li><a href="monitoramento.html">Monitoramento</a></li>
                 <li><a href="recomendacoes.html">Recomendações</a></li>
                 <li><a href="faleconosco.html">Fale Conosco</a></li>
-
             </ul>
-
         </nav>
-
     </header>
 
-   <article class="titulo">
-    <h1>Clique no mapa</h1>
-    <p>Para descobrir o local ideal para seu plantio</p>
-   </article>
-   <div class="wrapper">
-    <div class="mapa">
-           <img src="./assets/mapa.jpeg" alt="mapa">
-     </div>
-     <div class="container">
-        <div class="card">
-             <h2 id="estadoSelecionado">
-            Selecione um estado
-        </h2>
-        <table>
-            <tr>
-                <td>Fertilidade</td>
-                <td id="fertilidade"><strong>Alta</strong></td>
-            </tr>
-            <tr>
-                <td>pH do Solo</td>
-                <td id="ph"><strong>6.2</strong></td>
-            </tr>
-            <tr>
-                <td>Nitrogênio</td>
-                <td id="nitrogenio"><strong>86%</strong></td>
-            </tr>
-            <tr>
-                <td>Água Disponível</td>
-                <td id="agua"><strong>78%</strong></td>
-            </tr>
-        </table>
-        </div>
-        <div class="historico">
-                <div class="historico-header">
-                    <h2>Histórico de precipitação</h2>
-                    <div class="filtro">
-                        <label for="periodo">Período</label>
-                        <select name="periodo" id="periodo">
+    <div class="body-site">
+        <article class="titulo">
+            <h1>Clique no mapa</h1>
+            <p>Para descobrir o local ideal para seu plantio</p>
+        </article>
+        <div class="wrapper">
 
-                            <option value="qualquer-uma">qualquer</option>
-                            <option value="ultimo-ano">Último ano</option>
-                            <option value="6-meses">Últimos 6 meses</option>
-                            <option value="30-dias">Últimos 30 dias</option>
-                        </select>
-
-                        
+            <div class="main-content">
+                <div class="esquerda">
+                    <div class="mapa">
+                        <img src="./assets/mapa.jpeg" alt="mapa">
                     </div>
-                      </div>
-                      <div id="conteudo-historico"></div>
-              </div>
+                    <div class="container">
+                    <div class="card">
+                        <h2 id="estadoSelecionado">
+                        Dados do ponto selecionado:
+                    </h2>
+                <table>
+                    <tr>
+                        <td>Fertilidade</td>
+                        <td id="fertilidade"><strong>Alta</strong></td>
+                    </tr>
+                    <tr>
+                        <td>pH do Solo</td>
+                        <td id="ph"><strong>6.2</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Nitrogênio</td>
+                        <td id="nitrogenio"><strong>86%</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Água Disponível</td>
+                        <td id="agua"><strong>78%</strong></td>
+                    </tr>
+                </table>
+                </div>
+                <div class="historico">
+                        <div class="historico-header">
+                            <h2>Histórico de precipitação:</h2>
+                            <div class="filtro">
+                                <label for="periodo">Período</label>
+                                <select name="periodo" id="periodo">
+
+                                    <option value="qualquer-uma">Qualquer</option>
+                                    <option value="ultimo-ano">Último ano</option>
+                                    <option value="6-meses">Últimos 6 meses</option>
+                                    <option value="30-dias">Últimos 30 dias</option>
+                                </select>
+
+                                
+                            </div>
+                            </div>
+                            <div id="conteudo-historico">
+                                <p>
+                                    Mês 1: Foram registrados 142 mm de chuva no mês<br>
+                                    Mês 2: Foram registrados 138 mm de chuva no mês<br>
+                                    Mês 3: Foram registrados 100 mm de chuva no mês<br>
+                                    Mês 4: Foram registrados 80 mm de chuva no mês<br>
+                                    Mês 5: Foram registrados 180 mm de chuva no mês<br> 
+                                    Mês 6: Foram registrados 157 mm de chuva no mês<br>
+                                </p>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="barra-pesquisa">
+                    <h2>Pesquisa avançada</h2>
+                    <div class="filtro-item">
+                        <label for="endereco" id="title-endereco">Endereço</label>
+                    </div>
+                    
+                    <div class="filtro-item">
+                        <input type="text" id="endereco" placeholder="Digite o endereço">
+                        <button class="botao-pesquisar-endereco">Ir</button>
+                    </div>
+                    <div class="filtro-item">
+                        <label for="tipo-cultura">Tipo de cultura</label>
+                        <select name="tipo-cultura" id="tipo-cultura">
+                            <option value="soja">Soja</option>
+                            <option value="milho">Milho</option>
+                            <option value="trigo">Trigo</option>
+                            <option value="algodao">Feijão</option>
+                            <option value="algodao">Ervilha</option>
+                            <option value="algodao">Batata</option>
+                            <option value="algodao">Alface</option>
+                        </select>
+                    </div>
+                    <div class="filtro-item">
+                        <label for="qualidade-terreno">Qualidade geral do terreno</label>
+                        <select name="qualidade-terreno" id="qualidade-terreno">
+                            <option value="boa-umidade">Boa umidade</option>
+                            <option value="boa-nutricao">Boa nutrição</option>
+                            <option value="pouca-umidade">Pouca umidade</option>
+                            <option value="solo-seco">Solo seco</option>
+                        </select>
+                    </div>
+                    <div class="filtro-item">
+                        <label for="tipo-irrigacao">Tipo de irrigação</label>
+                        <select name="tipo-irrigacao" id="tipo-irrigacao">
+                            <option value="irrigacao-natural">Natural</option>
+                            <option value="irrigacao-artificial">Artificial</option>
+                        </select>
+                    </div>
+                    <button class="botao-pesquisar-geral">Pesquisar</button>
+                </div>
             </div>
-               <footer>
+
+            <div class="container-previsao">
+                <div class="historico">
+                    <h2 class="titulo-previsao">Previsão do Tempo (Próximos Dias)</h2>
+                    <div class="previsao-dias">
+                        <div class="dia-item">
+                            <span class="dia-nome">Segunda</span>
+                            <span class="clima-icone">☀️</span>
+                            <span class="clima-status">Ensolarado</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Terça</span>
+                            <span class="clima-icone">☁️</span>
+                            <span class="clima-status">Nublado</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Quarta</span>
+                            <span class="clima-icone">🌧️</span>
+                            <span class="clima-status">Chuva</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Quinta</span>
+                            <span class="clima-icone">🌧️</span>
+                            <span class="clima-status">Chuva</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Sexta</span>
+                            <span class="clima-icone">☁️</span>
+                            <span class="clima-status">Nublado</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Sábado</span>
+                            <span class="clima-icone">☀️</span>
+                            <span class="clima-status">Ensolarado</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Domingo</span>
+                            <span class="clima-icone">☀️</span>
+                            <span class="clima-status">Ensolarado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="historico">
+                    <h2 class="titulo-previsao">Previsão de Temperatura (Próximos Dias)</h2>
+                    <div class="previsao-dias">
+                        <div class="dia-item">
+                            <span class="dia-nome">Segunda</span>
+                            <span class="clima-icone">☀️</span>
+                            <span class="temperatura-valores"><strong>Máx: 29°C</strong> / Mín: 18°C</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Terça</span>
+                            <span class="clima-icone">☁️</span>
+                            <span class="temperatura-valores"><strong>Máx: 25°C</strong> / Mín: 17°C</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Quarta</span>
+                            <span class="clima-icone">🌧️</span>
+                            <span class="temperatura-valores"><strong>Máx: 22°C</strong> / Mín: 15°C</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Quinta</span>
+                            <span class="clima-icone">🌧️</span>
+                            <span class="temperatura-valores"><strong>Máx: 21°C</strong> / Mín: 14°C</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Sexta</span>
+                            <span class="clima-icone">☁️</span>
+                            <span class="temperatura-valores"><strong>Máx: 24°C</strong> / Mín: 16°C</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Sábado</span>
+                            <span class="clima-icone">☀️</span>
+                            <span class="temperatura-valores"><strong>Máx: 28°C</strong> / Mín: 18°C</span>
+                        </div>
+                        <div class="dia-item">
+                            <span class="dia-nome">Domingo</span>
+                            <span class="clima-icone">☀️</span>
+                            <span class="temperatura-valores"><strong>Máx: 30°C</strong> / Mín: 19°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
 
         <p>
             © 2026 - Agris - Inteligência territorial para o agronegócio.

@@ -16,10 +16,21 @@
 
 body{
     font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
-    padding: 120px 7% 0;
-    margin: 0 auto;
-    background-color:var(--principal-color);
+    background: linear-gradient(
+        145deg,
+        #00032e 30%,
+        #03084f 100%
+    );
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding: 120px 7% 0;
+    margin: 0 auto 0;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
 /* logo */
@@ -57,20 +68,6 @@ nav{
     border-bottom:1px solid rgba(56,189,248,0.12);
 
     transition:0.3s ease;
-}
-
-footer{
-    background-color: #00032e;
-    color: #F8FAFC;
-    text-align: center;
-    padding: 15px 7%;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
 }
 
 
@@ -129,9 +126,7 @@ nav ul li a:hover::after{
 
 article{
     display: flex;
-    margin: 20px;
     flex-direction: column;
-    
 }
 
 h1{
@@ -140,27 +135,26 @@ h1{
 }
 
 article p{
-    padding-top: 4px;
+    padding-top: 5px;
     font-size: 17px;
     color: var(--card-color);
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .simulacao{
-    width: 97%;
-    max-width: 97%;
-    min-height: 80px;
+    /* width: 97%; */
+    /* max-width: 97%; */
+    /* min-height: 80px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-color: var(--card-color);
     border-radius: var(--card-radius);
-    padding: 20px;
+    padding: 25px;
     margin: auto;
     overflow: hidden;
-
-    
+    box-shadow: 0 0 10px #fcfdf56c;
 }
 
 .simu-header{
@@ -179,8 +173,7 @@ article p{
 
 .simulacao button{
 
-    background:#002E3A
-        ;
+    background:#003a2b;
     color: var(--fundo-color);
     border-radius: 13px;
     border: none;
@@ -189,7 +182,6 @@ article p{
     gap: 8px;
     flex-shrink: 0;
     cursor: pointer;
-
 }
 
 .botoes{
@@ -197,8 +189,6 @@ article p{
     gap: 8px;
     margin-left: auto; 
     width: fit-content;
-
-
 }
 
 .botoes i{
@@ -236,25 +226,26 @@ article p{
 .seq-card{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    gap: 16px;
-    margin: 20px;
+    gap: 20px;
+    margin-top: 20px;
     align-items: start;
     flex-wrap: wrap;
-
+    margin-bottom: 120px;
 }
 
 
 .card{
     box-sizing: border-box;
-    height: 280px;
+    height: 250px;
     background-color: var(--card-color);
-    padding: 30px;
+    padding: 25px;
     border-radius: var(--card-radius);
     display: flex;
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
     transition: all 0.2s ease;
+    box-shadow: 0 0 10px #fcfdf56c;
 }
 
 .card:hover{
@@ -280,21 +271,21 @@ article p{
     border-radius: 14px;
     padding: 6px;
     font-size: 17px;
-    
-}
-        
-footer{
-    background-color: var(--principal-color);
-    margin-top: 20px;
-    width: 100%;
-    height: auto;
 }
 
-footer p{
-    color: var(--card-color);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+footer {
+    background-color: var(--principal-color);
+    color: #F8FAFC;
+    text-align: center;
+    padding: 15px 7%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
 
 @media (max-width: 768px) {

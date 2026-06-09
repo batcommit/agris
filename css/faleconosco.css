@@ -24,7 +24,6 @@ body{
     font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
     overflow-x:hidden;
     color:#222;
-    padding: 0;
 }
 
 /* =========================================================
@@ -33,6 +32,7 @@ SECTIONS GLOBAIS
 
 section{
     padding:120px 7%;
+    box-sizing:border-box;
 }
 
 /* =========================================================
@@ -72,15 +72,14 @@ nav{
     transition:0.3s ease;
 }
 
-footer{
-    background-color: #00032e;
+footer {
+    background-color: #00032E;
     color: #F8FAFC;
     text-align: center;
     padding: 15px 7%;
     width: 100%;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
+    /* margin-top: 30px; */
 }
 
 footer p {
@@ -158,20 +157,11 @@ CONTATO
     overflow:hidden;
 
     background:
-    radial-gradient(
-        circle at top right,
-        rgba(59,74,107,0.18),
-        transparent 35%
-    ),
-    radial-gradient(
-        circle at bottom left,
-        rgba(31,175,67,0.08),
-        transparent 40%
-    ),
     linear-gradient(
         135deg,
-        #00032E 0%,
-        #F8FAFC 100%
+        #00032e 10%,
+        #3b4a6b 55%,
+        #e6ebf5 100%
     );
 }
 
@@ -301,26 +291,26 @@ CARDS
 
 .info-card{
 
-    background:#F8FAFC;
+    background: #fcfdf5;
 
     padding:30px;
 
     border-radius:var(--card-radius);
 
-    border:1px solid #D6E1EE;
+    border:1px solid #7f7f79;
 
     box-shadow:
     0 12px 32px rgba(15,23,42,0.08);
+
+    box-shadow: 0 0 15px #fcfdf548;
 
     transition:0.35s ease;
 }
 
 .info-card:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-4px);
 
-    box-shadow:
-    0 20px 45px rgba(15,23,42,0.12);
 }
 
 .info-card h3{
@@ -345,7 +335,7 @@ FORMULARIO
 
 .contato-form{
 
-    background:#F1F6FC;
+    background:#fcfdf5;
 
     padding:40px;
 
@@ -361,6 +351,8 @@ FORMULARIO
 
     box-shadow:
     0 12px 32px rgba(15,23,42,0.08);
+
+    box-shadow: 0 0 15px #fcfdf548;
 }
 
 /* =========================================================
@@ -376,9 +368,9 @@ INPUTS
 
     border-radius:14px;
 
-    border:1px solid #C7D5E5;
+    border:1px solid #d4d5c8;
 
-    background:#FFFFFF;
+    background:#fefff8;
 
     color:#0F172A;
 
@@ -431,6 +423,8 @@ BOTAO
 
     color:#F8FAFC;
 
+    z-index: 1;
+
     background:
     linear-gradient(
         135deg,
@@ -438,22 +432,32 @@ BOTAO
         #1FAF43
     );
 
-    transition:0.3s ease;
-
     box-shadow:
     0 12px 28px rgba(4,94,23,0.35);
+
+    transition: all 0.25s ease !important;
 }
 
-.contato-form button:hover{
+.contato-form button::before {
+    content: '';
+    position: absolute;
+    border-radius:14px;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; 
+    
+    background: linear-gradient(135deg, #034611, #138B31);
+    
+    opacity: 0; 
+    transition: opacity 0.25s ease !important; 
+}
 
-    transform:translateY(-3px);
+/* Efeitos de Hover */
+.contato-form button:hover {
+    transform: translateY(-2px);
+}
 
-    background:
-    linear-gradient(
-        135deg,
-        #034611,
-        #138B31
-    );
+.contato-form button:hover::before {
+    opacity: 1;
 }
 
 /* =========================================================

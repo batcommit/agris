@@ -11,12 +11,23 @@
 }
 
 body{
-    background:var(--principal);
+    background: linear-gradient(
+        145deg,
+        #00032e 30%,
+        #03084f 100%
+    );
     font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
-    padding: 120px 7% 40px;
-    margin: 0 auto;
     box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+    
 }
+
+.body-site {
+    padding: 120px 7% 0;
+    margin: 0 auto;
+}
+
 .logo {
     width: 350px;
 }
@@ -139,40 +150,74 @@ nav ul li a:hover::after{
     
 }
 .wrapper {
-    max-width: 1100px;  
+    max-width: 1300px;  
     margin: 0 auto;
+}
+
+.esquerda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .mapa{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .mapa img{
     border-radius: 20px;
     cursor: pointer;
     width: 100%;
+    box-shadow: 0 0 10px #fcfdf56c;
     
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: flex-start;
 }
 
 .container {
     display: none;
+    flex-direction: row;
     gap: 20px;
-    margin-top: 20px;
-    align-items: flex-start;
     align-items: stretch;
     width: 100%;
+}
+
+.container.active {
+    display: flex;
+}
+
+.container.active .card,
+.container.active .historico {
+    animation: slideDownFade 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .card{
     display: flex;
     background-color: var(--card);
     flex-direction: column;
-    width: 50%;
+    flex: 1;
     border-radius: 20px;
     padding: 20px;
+    box-shadow: 0 0 10px #fcfdf56c;
   
 }
 .card h2{
@@ -196,7 +241,9 @@ table td{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 20px;}
+    padding: 20px;
+    box-shadow: 0 0 10px #fcfdf56c;
+}
     
 
 
@@ -217,19 +264,173 @@ table td{
     
 }
 
- #periodo{
+#periodo{
     background-color: var(--principal);
     color: var(--card);
     padding: 10px;
    
     border-radius: 10px;
 }
+
+.barra-pesquisa {
+    background-color: var(--card);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px #fcfdf56c;
+    width: 300px;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.barra-pesquisa h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--principal);
+}
+
+.barra-pesquisa .filtro-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.barra-pesquisa .filtro-item label {
+    font-weight: 600;
+    color: var(--principal);
+}
+
+.barra-pesquisa input[type="text"],
+.barra-pesquisa select {
+    background-color: var(--principal);
+    color: var(--card);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+.barra-pesquisa input[type="text"] {
+    flex-grow: 1;
+}
+
+.barra-pesquisa .filtro-item:has(input[type="text"]) {
+    flex-direction: row;
+    align-items: center;
+}
+
+#title-endereco {
+    margin: 0 0 -8px;
+}
+
+.barra-pesquisa button {
+    background: linear-gradient(135deg, #045E17, #0B7A24);
+    color: #F8FAFC;
+    border: 1px solid rgba(56,189,248,0.08);
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.barra-pesquisa button:hover {
+    background: linear-gradient(135deg, #045E17, #1FAF43);
+    transform: translateY(-2px);
+}
+
+.botao-pesquisar-geral {
+    margin-top: 20px;
+}
+
+/* CONTAINER E CARDS DE PREVISÃO DO TEMPO/TEMPERATURA */
+.container-previsao {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container-previsao.active {
+    display: flex;
+}
+
+.container-previsao.active .historico {
+    animation: slideDownFade 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.titulo-previsao {
+    color: var(--principal);
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.previsao-dias {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.dia-item {
+    background-color: var(--principal);
+    color: var(--card);
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s;
+}
+
+.dia-item:hover {
+    transform: translateY(-3px);
+}
+
+.dia-nome {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.clima-icone {
+    font-size: 28px;
+}
+
+.clima-status {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.temperatura-valores {
+    font-size: 13px;
+}
+
 @media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .esquerda {
+    width: 100%;
+  }
   .container {
+    width: 100%;
     flex-direction: column;
   }
   .card {
     width: 100%;
+  }
+  .barra-pesquisa {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -239,6 +440,3 @@ table td{
     padding-right: 20px;
    }
 }
-
-
-
