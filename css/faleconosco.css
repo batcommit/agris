@@ -438,22 +438,10 @@ BOTAO
     transition: all 0.25s ease !important;
 }
 
-.contato-form button::before {
-    content: '';
-    position: absolute;
-    border-radius:14px;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1; 
-    
-    background: linear-gradient(135deg, #034611, #138B31);
-    
-    opacity: 0; 
-    transition: opacity 0.25s ease !important; 
-}
-
-/* Efeitos de Hover */
 .contato-form button:hover {
     transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #034611, #138B31);
 }
 
 .contato-form button:hover::before {
