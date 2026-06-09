@@ -246,11 +246,36 @@ article p{
     overflow: hidden;
     transition: all 0.2s ease;
     box-shadow: 0 0 10px #fcfdf56c;
+    
+    /* Configurações para a animação de entrada */
+    opacity: 0;
+    animation: carregarCards 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .card:hover{
     opacity: 0.96;
+    transform: translateY(-4px); /* Um sutil efeito de elevação no hover, se desejar */
 }
+
+/* Definição da animação: surge suavemente vindo levemente de cima para baixo */
+@keyframes carregarCards {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Atrasos progressivos para criar o efeito cascata de cima para baixo */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
 
 .card h3{
     font-size: 30px; 
